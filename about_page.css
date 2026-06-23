@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Pretendard";
+    min-width: 1450px;
+}
+
+.notice {
+    width: 100%;
+    height: 25px;
+    background: #7fe6d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.notice {
+    width: 100%;
+    height: 25px;
+    background: #7fe6d7;
+    overflow: hidden;
+}
+
+.notice .swiper-slide {
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7fe6d7;
+}
+
+.notice .swiper-slide p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #34373A;
+}
+
+
+
+/* 좌측 메뉴 */
+
+.side_menu {
+    position: absolute;
+    width: 242px;
+    height: 32px;
+    top: 60px;
+    left: 60px;
+}
+
+.side_menu a {
+
+    font-weight: 900;
+    color: #2f3640;
+}
+
+.side_menu li {
+    margin-bottom: 20px;
+}
+
+.side_menu li a {
+    font-size: 22px;
+    font-weight: 700;
+    color: #7fe6d7;
+    transition: .3s;
+}
+
+.side_menu li a:hover {
+    opacity: .7;
+}
+
+/* 우측 아이콘 */
+
+.user-icons {
+    position: absolute;
+    top: 50px;
+    right: 50%;
+transform: translateX(650px);
+    display: flex;
+    gap: 20px;
+}
+
+.user-icons a {
+    font-size: 20px;
+    color: #383b3d;
+}
+
+
