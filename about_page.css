@@ -52,6 +52,12 @@ body {
 
 
 
+.hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 25px);
+}
+
 /* 좌측 메뉴 */
 
 .side_menu {
@@ -60,6 +66,7 @@ body {
     height: 32px;
     top: 60px;
     left: 60px;
+    z-index: 10;
 }
 
 .side_menu a {
@@ -92,11 +99,9 @@ body {
 transform: translateX(650px);
     display: flex;
     gap: 20px;
-}
+ z-index: 10;}
 
 .user-icons a {
     font-size: 20px;
     color: #383b3d;
 }
-
-

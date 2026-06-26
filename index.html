@@ -56,7 +56,7 @@
                     <li><a href="#">Top</a></li>
                     <li><a href="#">Bottom</a></li>
                     <li><a href="#">Acc</a></li>
-                    <li><a href="#">About us</a></li>
+                    <li><a href="./about_page.html">About us</a></li>
                 </ul>
             </nav>
 
@@ -92,28 +92,31 @@
                     <div class="swiper-slide"><img src="./images/banner7.png" alt=""></div>
 
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                
             </div>
         </div>
 
     </section>
 
     <!--두번째 섹션-->
-    <section id="second">
-        <div class="inner">
-            <div class="left">
-                <img class="title_img" src="./images/Group 2.png" alt="">
-                <img class="title_img2" src="./images/image 4.png" alt="">
-                <a href="#" class="view_more">
-                    VIEW MORE
-                </a>
-            </div>
-            <div class="right">
-                <img src="./images/Group 3.png" alt="">
-            </div>
+   <section id="second" class="fade-section">
+    <div class="inner">
+
+        <div class="left fade-up">
+            <img class="title_img fade-up delay1" src="./images/Group 2.png" alt="">
+            <img class="title_img2 fade-up delay2" src="./images/image 4.png" alt="">
+
+            <a href="#" class="view_more fade-up delay3">
+                VIEW MORE
+            </a>
         </div>
-    </section>
+
+        <div class="right fade-right delay4">
+            <img src="./images/Group 3.png" alt="">
+        </div>
+
+    </div>
+</section>
 
     <!--다이어리섹션-->
     <section id="diary">
@@ -505,6 +508,27 @@
             speed: 700, 
         });
     </script>
+
+<!--뷰몰 자동올라오기-->
+<script>
+    const fadeEls = document.querySelectorAll(
+    ".fade-up, .fade-right"
+);
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+},{
+    threshold:0.2
+});
+
+fadeEls.forEach(el=>{
+    observer.observe(el);
+});
+</script>
 
     <!--베스트아이템-->
     <script>

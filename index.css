@@ -177,6 +177,25 @@ transform: translateX(650px);
 .right img {
     width: 110%;
 }
+/* 아래에서 올라오기 */
+.fade-up{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .8s ease;
+}
+
+/* 오른쪽에서 들어오기 */
+.fade-right{
+    opacity:0;
+    transform:translateX(80px);
+    transition:all .9s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translate(0,0);
+}
+
 
 #diary {
     width: 100%;

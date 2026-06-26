@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>515DAY_AboutUs</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./about_page.css">
 </head>
 <body>
@@ -47,7 +48,7 @@
                     <li><a href="#">Top</a></li>
                     <li><a href="#">Bottom</a></li>
                     <li><a href="#">Acc</a></li>
-                    <li><a href="#">About us</a></li>
+                    <li><a href="./about_page.html">About us</a></li>
                 </ul>
             </nav>
 
@@ -64,16 +65,53 @@
                 <a href="#">
                     <img src="./images/coupon.png" alt="">
                 </a>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper main_pic">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./images/banner1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./images/banner2.png" alt=""></div>
+
+                    <div class="swiper-slide"><img src="./images/banner3.png" alt=""></div>
+
+                    <div class="swiper-slide"><img src="./images/banner4.png" alt=""></div>
+
+                    <div class="swiper-slide"><img src="./images/banner5.png" alt=""></div>
+
+                    <div class="swiper-slide"><img src="./images/banner6.png" alt=""></div>
+
+                    <div class="swiper-slide"><img src="./images/banner7.png" alt=""></div>
+
+                </div>
+                
+            </div>
+        </div>
 
     </section>
-
+    
     <!--ABOUT US-->
     <section>
 
     </section>
 
 
-    
+    <!--메인배너 스와이퍼-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".main_pic", {
+           
+            effect: "fade",
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            speed: 700, 
+        });
+    </script>
 
  <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
