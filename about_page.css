@@ -17,6 +17,7 @@ ul {
 body {
     font-family: "Pretendard";
     min-width: 1450px;
+    background-color: #FEFCF5;
 }
 
 .notice {
@@ -96,12 +97,110 @@ body {
     position: absolute;
     top: 50px;
     right: 50%;
-transform: translateX(650px);
+    transform: translateX(650px);
     display: flex;
     gap: 20px;
- z-index: 10;}
+    z-index: 10;
+}
 
 .user-icons a {
     font-size: 20px;
     color: #383b3d;
+}
+
+#brand_story {
+    width: 100%;
+    padding: 120px 0 140px;
+    background: #fbfaf4;
+}
+
+.brand_inner {
+    width: 64%;
+    margin: 0 auto;
+}
+
+#brand_story h2 {
+    margin-bottom: 50px;
+}
+
+#brand_story h2 img {
+    width: 170px;
+    display: block;
+}
+
+.story_content {
+    width: 100%;
+}
+
+.story_star {
+    width: 90px;
+    margin-bottom: 35px;
+    display: block;
+}
+
+.story_content h3 {
+    margin-bottom: 35px;
+
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1;
+
+    color: #ff3d9e;
+    letter-spacing: -2px;
+}
+
+.story_content p {
+    margin-bottom: 32px;
+
+    font-size: 18px;
+    line-height: 1.75;
+    font-weight: 500;
+
+    color: #333;
+}
+
+/* scroll animation */
+
+.fade_up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1.5s ease;
+}
+
+.fade_up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+#marquee {
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+}
+
+.marquee_track {
+    display: flex;
+    width: max-content;
+    background-color: #7fe6d7;
+    animation: marquee 25s linear infinite;
+}
+
+.marquee_track img {
+    height: 90px;
+    display: block;
+
+    flex-shrink: 0;
+}
+
+@keyframes marquee {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
 }

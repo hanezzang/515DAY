@@ -91,9 +91,47 @@
     </section>
     
     <!--ABOUT US-->
-    <section>
+   
+<section id="brand_story">
 
-    </section>
+    <div class="brand_inner">
+
+        <h2>
+            <img src="./images/BRAND STORY.png" alt="BRAND STORY">
+        </h2>
+
+        <div class="story_content fade_up">
+
+            <img src="./images/sb_1.png" alt="">
+
+            <h3><img src="./images/PINK_SLO.png" alt=""></h3>
+
+            <p>
+                515DAY는 부산에서 시작된 브랜드로<br>
+                평범한 일상에 반짝임을 더하는 Y2K 컨템포러리 브랜드 입니다.
+            </p>
+
+            <p>
+                부산 바다의 윤슬처럼 저마다의 방식으로 빛나는 존재들을 응원합니다.<br>
+                우리는 일상 속 작은 반짝임이 자신감이 될 수 있다고 믿습니다.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+   
+<div class="marquee_track">
+
+    <img src="./images/slide_font.png" alt="">
+    <img src="./images/slide_font.png" alt="">
+    <img src="./images/slide_font.png" alt="">
+    <img src="./images/slide_font.png" alt="">
+
+</div>
+
+<section></section>
 
 
     <!--메인배너 스와이퍼-->
@@ -128,5 +166,21 @@
             speed: 700,
         });
     </script>
+
+<!--슬로건-->
+    <script>
+const fadeEls = document.querySelectorAll(".fade_up");
+
+window.addEventListener("scroll", function(){
+    fadeEls.forEach(function(el){
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if(rect.top < windowHeight - 100){
+            el.classList.add("show");
+        }
+    });
+});
+</script>
 </body>
 </html>
