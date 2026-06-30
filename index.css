@@ -17,7 +17,7 @@ ul {
 body {
     font-family: "Pretendard";
     min-width: 1450px;
-background-color: #FEFCF5;
+    background-color: #FEFCF5;
 }
 
 .notice {
@@ -95,10 +95,11 @@ background-color: #FEFCF5;
     position: absolute;
     top: 50px;
     right: 50%;
-transform: translateX(650px);
+    transform: translateX(650px);
     display: flex;
     gap: 20px;
- z-index: 10;}
+    z-index: 10;
+}
 
 .user-icons a {
     font-size: 20px;
@@ -114,6 +115,7 @@ transform: translateX(650px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 #second .inner {
@@ -178,30 +180,31 @@ transform: translateX(650px);
 .right img {
     width: 110%;
 }
+
 /* 아래에서 올라오기 */
-.fade-up{
-    opacity:0;
-    transform:translateY(50px);
-    transition:all .8s ease;
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all .8s ease;
 }
 
 /* 오른쪽에서 들어오기 */
-.fade-right{
-    opacity:0;
-    transform:translateX(80px);
-    transition:all .9s ease;
+.fade-right {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: all .9s ease;
 }
 
-.show{
-    opacity:1;
-    transform:translate(0,0);
+.show {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 
 #diary {
     width: 100%;
     padding: 100px 0;
-    
+
 }
 
 .diary_inner {
@@ -441,15 +444,15 @@ transform: translateX(650px);
 }
 
 #bestitem {
-    width:90%;
-    margin:0 auto;
-    overflow:hidden;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 #bestitem .inner {
-    width:100%;
-    max-width:none;
-    margin:0 auto;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
 }
 
 #bestitem h2 {
@@ -528,7 +531,7 @@ transform: translateX(650px);
 #event_banner {
     width: 100%;
     padding: 100px 0;
-   
+
 }
 
 .event_inner {
@@ -672,7 +675,7 @@ transform: translateX(650px);
 #story {
     width: 100%;
     padding: 120px 0;
-   
+
 }
 
 #story .inner {
