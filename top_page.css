@@ -52,6 +52,8 @@ body {
     color: #34373A;
 }
 
+
+
 .hero {
     position: relative;
     width: 100%;
@@ -72,7 +74,7 @@ body {
 .side_menu a {
 
     font-weight: 900;
-    color: #2f3640;
+    color: #34373A;
 }
 
 .side_menu li {
@@ -90,140 +92,196 @@ body {
     opacity: .7;
 }
 
+/* 우측 아이콘 */
 
-.product_section {
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 62% 38%;
-    background: #F8F7F1;
-}
-
-/* =======================
-   LEFT
-======================= */
-
-.product_left {
-    overflow: hidden;
-}
-
-.product_left img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* =======================
-   RIGHT
-======================= */
-
-.product_right {
-    position: relative;
-    background: #F8F7F1;
-    padding: 70px 55px;
-    box-sizing: border-box;
-}
-
-/* PRODUCT */
-
-.product_heading {
+.user-icons {
+    position: absolute;
+    top: 50px;
+    right: 50%;
+    transform: translateX(650px);
     display: flex;
-    align-items: flex-start;
-    gap: 18px;
+    gap: 20px;
+    z-index: 10;
 }
 
-.product_title {
-    width: 250px;
-    display: block;
-}
-
-.title_line {
-    width: 120px;
-    height: 4px;
-    background: #7FE6D7;
-    margin-top: 35px;
-    border-radius: 2px;
-}
-
-.product_desc {
-    margin-top: 22px;
+.user-icons a {
     font-size: 20px;
-    line-height: 1.6;
-    color: #333;
+    color: #34373A;
 }
 
-/* =======================
-   티셔츠
-======================= */
-
-.product_item {
-    position: absolute;
-    left: 50%;
-    top: 53%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
+.product_detail{
+    width:100%;
+    display:grid;
+    grid-template-columns:52% 48%;
+    box-sizing:border-box;
+    padding: 180px;
 }
 
-.product_item img {
-    width: 280px;
-    display: block;
-    transition: transform .45s ease, filter .45s ease;
+.detail_left{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-/* 괄호 고정 */
-.product_item::before,
-.product_item::after {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 180px;
-    font-weight: 200;
-    color: #7FE6D7;
-    line-height: 1;
-    pointer-events: none;
+.detail_left img{
+    width:70%;
+    max-width:620px;
+    display:block;
 }
 
-.product_item::before {
-    content: "(";
-    left: -80px;
+.detail_right{
+    padding:40px 40px 0;
+    box-sizing:border-box;
 }
 
-.product_item::after {
-    content: ")";
-    right: -80px;
+.detail_top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding-top: 50px;
 }
 
-/* 티셔츠 hover */
-.product_item:hover img {
-    transform: translateY(-10px) scale(1.05);
-    filter: drop-shadow(0 20px 35px rgba(127, 230, 215, .35));
+.detail_top h2{
+    font-size:18px;
+    font-weight:400;
+    color:#111;
 }
 
-
-/* =======================
-   EVENT
-======================= */
-
-.event_heading {
-    position: absolute;
-    right: 55px;
-    bottom: 70px;
-    display: flex;
-    align-items: center;
-    gap: 18px;
+.heart_btn{
+    border:none;
+    background:none;
+    font-size:32px;
+    cursor:pointer;
+    transition:.25s ease;
 }
 
-.event_line {
-    width: 120px;
-    height: 4px;
-    background: #7FE6D7;
-    border-radius: 2px;
+.heart_btn.active{
+    color:#7FE6D7;
+    transform:scale(1.15);
 }
 
-.event_title {
-    width: 250px;
-    display: block;
+/* 컬러 선택 */
+
+.color_options label{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    cursor:pointer;
+    margin-bottom:10px;
+}
+
+.color_options input{
+    display:none;
+}
+
+.check_box{
+    width:16px;
+    height:16px;
+    border:1px solid #111;
+    display:inline-block;
+    position:relative;
+    box-sizing:border-box;
+}
+
+.color_options input:checked + .check_box{
+    background:#7FE6D7;
+    border-color:#7FE6D7;
+}
+
+.color_options input:checked + .check_box::after{
+    content:"✓";
+    position:absolute;
+    left:2px;
+    top:-5px;
+    font-size:18px;
+    color:#333;
+}
+
+/* size hover */
+
+.size_btn{
+    width:52px;
+    height:34px;
+    border:1px solid #d8c6c6;
+    background:#f6eeee;
+    cursor:pointer;
+    transition:.25s ease;
+}
+
+.size_btn:hover{
+    background:#7FE6D7;
+    border-color:#7FE6D7;
+    color:#fff;
+}
+
+.size_btn.active{
+    background:#7FE6D7;
+    border-color:#7FE6D7;
+    color:#fff;
+}
+
+.price{
+    margin-top:20px;
+    font-size:18px;
+    color:#111;
+}
+
+.product_info{
+    margin-top:80px;
+    list-style:none;
+    padding:0;
+}
+
+.product_info li{
+    font-size:15px;
+    line-height:1.7;
+    color:#111;
+}
+
+.option_group{
+    margin-top:70px;
+}
+
+.option_title{
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.option_group label{
+    display:block;
+    font-size:15px;
+    margin-bottom:9px;
+    color:#111;
+}
+
+.option_group input{
+    width:18px;
+    height:18px;
+    margin-right:8px;
+    accent-color:#7FE6D7;
+}
+
+.size_btn{
+    width:52px;
+    height:34px;
+    border:1px solid #d8c6c6;
+    background:#f6eeee;
+    cursor:pointer;
+}
+
+.cart_btn{
+    width:100%;
+    height:64px;
+    margin-top:60px;
+    border:none;
+    background:#7FE6D7;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.cart_btn:hover{
+    background:#48857c;
 }
 
 /* scroll animation */
@@ -274,64 +332,14 @@ body {
 
 }
 
-#promotion {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+#img{width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
-.page_move {
-    width: 1320px;
-    margin: 120px auto;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-}
-
-.move_item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 28px 0;
-    text-decoration: none;
-    color: #222;
-    transition: .3s;
-}
-
-.move_item:first-child {
-    border-bottom: 1px solid #eee;
-}
-
-.move_type {
-    width: 80px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #999;
-}
-
-.move_title {
-    flex: 1;
-    margin-left: 40px;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.move_arrow {
-    font-size: 24px;
-    transition: .3s;
-}
-
-.move_item:hover {
-    color: #7FE6D7;
-}
-
-.move_item:hover .move_arrow {
-    transform: translateX(8px);
-}
-
-.move_item:hover .move_title {
-    transform: translateX(6px);
-    transition: .3s;
-}
+#img img{padding: 10px 0;
+width: ;}
 
 #footer {
     width: 100%;
