@@ -124,14 +124,15 @@ body {
 }
 
 .detail_left img{
-    width:70%;
+   
     max-width:620px;
     display:block;
 }
 
 .detail_right{
-    padding:40px 40px 0;
+    
     box-sizing:border-box;
+    
 }
 
 .detail_top{
@@ -142,23 +143,11 @@ body {
 }
 
 .detail_top h2{
-    font-size:18px;
+    font-size:30px;
     font-weight:400;
     color:#111;
 }
 
-.heart_btn{
-    border:none;
-    background:none;
-    font-size:32px;
-    cursor:pointer;
-    transition:.25s ease;
-}
-
-.heart_btn.active{
-    color:#7FE6D7;
-    transform:scale(1.15);
-}
 
 /* 컬러 선택 */
 
@@ -222,7 +211,7 @@ body {
 
 .price{
     margin-top:20px;
-    font-size:18px;
+    font-size:20px;
     color:#111;
 }
 
@@ -243,7 +232,7 @@ body {
 }
 
 .option_title{
-    font-size:14px;
+    font-size:20px;
     margin-bottom:10px;
 }
 
@@ -267,23 +256,123 @@ body {
     border:1px solid #d8c6c6;
     background:#f6eeee;
     cursor:pointer;
+    transition:.25s;
+}
+
+.size_btn:hover{
+    background:#7FE6D7;
+    border-color:#7FE6D7;
+    color:#fff;
+}
+
+.size_btn.active{
+    background:#7FE6D7;
+    border-color:#7FE6D7;
+    color:#fff;
+}
+
+.color_options label{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-size:15px;
+    margin-bottom:10px;
+    cursor:pointer;
+    color:#111;
+}
+
+.color_options input{
+    display:none;
+}
+
+.check_box{
+    width:18px;
+    height:18px;
+    border:1px solid #111;
+    display:inline-block;
+    position:relative;
+    box-sizing:border-box;
+}
+
+/* 선택됐을 때 컬러별 배경 */
+.color_options .mint input:checked + .check_box{
+    background:#7FE6D7;
+    border-color:#7FE6D7;
+}
+
+.color_options .shell_pink input:checked + .check_box{
+    background:#F6C6D5;
+    border-color:#F6C6D5;
+}
+
+.color_options .lemon input:checked + .check_box{
+    background:#FFF3A3;
+    border-color:#FFF3A3;
+}
+
+/* 체크 표시 */
+.color_options input:checked + .check_box::after{
+    content:"✓";
+    position:absolute;
+    left:2px;
+    top:-5px;
+    font-size:18px;
+    color:#333;
+}
+.purchase_bar{
+    width:100%;
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:70px 1fr 1fr;
+    height:68px;
+}
+
+.wish_btn,
+.cart_btn,
+.buy_btn{
+    border:none;
+    height:68px;
+    cursor:pointer;
+    transition:.25s ease;
+}
+
+.wish_btn{
+    background:#2b2b2b;
+    color:#fff;
+    font-size:28px;
+}
+
+.wish_btn.active{
+    color:#ff3b5f;
 }
 
 .cart_btn{
-    width:100%;
-    height:64px;
-    margin-top:60px;
-    border:none;
+    background:#111;
+    color:#fff;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1.5px;
+}
+
+.buy_btn{
     background:#7FE6D7;
-    font-size:15px;
-    cursor:pointer;
-    transition:.3s;
+    color:#fff;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1.5px;
+}
+
+.wish_btn:hover{
+    background:#3a3a3a;
 }
 
 .cart_btn:hover{
-    background:#48857c;
+    background:#252525;
 }
 
+.buy_btn:hover{
+    background:#69d9cb;
+}
 /* scroll animation */
 
 .fade_up {
@@ -339,7 +428,96 @@ body {
 }
 
 #img img{padding: 10px 0;
-width: ;}
+width: 600px;}
+
+
+.size_detail{
+    width:1320px;
+    max-width:90%;
+    margin:140px auto;
+    color:#111;
+}
+
+.size_detail h2{
+    font-size:22px;
+    font-weight:500;
+    letter-spacing:2px;
+    margin-bottom:28px;
+}
+
+.size_table{
+    width:100%;
+    border-collapse:collapse;
+    border-top:1px solid #111;
+}
+
+.size_table th,
+.size_table td{
+    border-bottom:1px solid #ddd;
+    padding:18px 12px;
+    text-align:center;
+    font-size:14px;
+    font-weight:400;
+}
+
+.size_table th{
+    background:#f8f7f1;
+    font-weight:600;
+}
+
+.size_notice{
+    margin-top:16px;
+    font-size:13px;
+    color:#777;
+}
+
+.fabric_info{
+    width:1320px;
+    max-width:90%;
+    margin:100px auto;
+    
+}
+
+.fabric_info h2{
+    font-size:22px;
+    font-weight:500;
+    letter-spacing:2px;
+    margin-bottom:28px;
+    
+}
+
+.fabric_table{
+    border-top:1px solid #111;
+}
+
+.fabric_table .row{
+    display:grid;
+    grid-template-columns:160px repeat(3, 1fr);
+    border-bottom:1px solid #ddd;
+}
+
+.fabric_table .title,
+.fabric_table .option{
+    padding:18px 24px;
+    font-size:14px;
+    border-right:1px solid #eee;
+    text-align:left;
+}
+
+.fabric_table .title{
+    text-align:center;
+    font-weight:500;
+    background:#f8f7f1;
+}
+
+.fabric_table .option:last-child{
+    border-right:none;
+}
+
+.fabric_table .active{
+    color:#d85b4f;
+    font-weight:600;
+}
 
 #footer {
     width: 100%;
