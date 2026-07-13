@@ -132,15 +132,16 @@ body {
 
 .detail_right{
     flex: 1;
+    display: flex;
     box-sizing:border-box;
-    
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .detail_top{
-    display:flex;
+    
     justify-content:space-between;
     align-items:flex-start;
-    padding-top: 50px;
 }
 
 .detail_top h2{
@@ -217,7 +218,7 @@ body {
 }
 
 .product_info{
-    margin-top:80px;
+   
     list-style:none;
     padding:0;
 }
@@ -228,9 +229,6 @@ body {
     color:#111;
 }
 
-.option_group{
-    margin-top:70px;
-}
 
 .option_title{
     font-size:20px;
@@ -322,8 +320,7 @@ body {
 }
 .purchase_bar{
     width:100%;
-    margin-top:70px;
-    display:grid;
+       display:grid;
     grid-template-columns:70px 1fr 1fr;
     height:68px;
 }
