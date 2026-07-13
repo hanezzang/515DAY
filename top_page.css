@@ -110,15 +110,17 @@ body {
 }
 
 .product_detail{
-    width:100%;
-    display:grid;
+    width:1320px;
+    margin: auto;
+    display:flex;
+    gap: 150px;
     grid-template-columns:52% 48%;
     box-sizing:border-box;
-    padding: 180px;
+    padding: 200px 0 ;
 }
 
 .detail_left{
-    display:flex;
+    width: 620px;
     justify-content:center;
     align-items:center;
 }
@@ -130,7 +132,7 @@ body {
 }
 
 .detail_right{
-    
+    flex: 1;
     box-sizing:border-box;
     
 }
